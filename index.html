@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema - Movie Browser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-900 min-h-screen">
+    <!-- Header Section -->
+    <header
+      class="px-4 md:px-12 py-4 flex flex-col sm:flex-row justify-between items-center gap-4"
+    >
+      <a class="flex items-center">
+        <img
+          src="logo.png"
+          alt="Cinema Logo"
+          class="w-12 h-12 cursor-pointer"
+        />
+      </a>
+
+      <div class="w-full sm:w-auto flex items-center gap-2">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search movies..."
+          class="w-full sm:w-64 px-4 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-yellow-400"
+        />
+        <button
+          id="searchbtn"
+          class="px-6 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500 transition-colors"
+        >
+          Search
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="main-image"
+      class="relative my-6 md:my-12 bg-[url('bg.jpg')] w-full bg-cover bg-center flex justify-center items-center"
+      style="height: 40vh; min-height: 300px; max-height: 70vh"
+    >
+      <div class="absolute inset-0 bg-black opacity-55"></div>
+      <h1
+        id="welcome-to-the-cinema"
+        class="text-center relative z-10 text-4xl sm:text-6xl md:text-8xl font-bold text-yellow-400 px-4"
+      >
+        Welcome to the Cinema
+      </h1>
+    </section>
+
+    <!-- Popular Movies Section -->
+    <section class="px-4 md:px-12 mt-8">
+      <h2 class="text-2xl md:text-4xl text-white mb-6">Popular Movies</h2>
+      <div id="popular-movies" class="movie-grid"></div>
+    </section>
+
+    <!-- Favourite Movies Section -->
+    <section class="px-4 md:px-12 mt-8 mb-12">
+      <h2 class="text-2xl md:text-4xl text-white mb-6">Favourite Movies</h2>
+      <div id="Favourite-movies" class="movie-grid"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
